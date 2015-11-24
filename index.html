@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Piavi by gllmAR</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Piavi</h1>
+        <p>PiaVI : Pi interactive Audio Visual Interface</p>
+
+        <p class="view"><a href="https://github.com/gllmAR/piavi">View the Project on GitHub <small>gllmAR/piavi</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/gllmAR/piavi/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/gllmAR/piavi/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/gllmAR/piavi">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract</h3>
+
+<p>Assembler un environnement de lecture et de génération audiovisuel interactif à la fois autonome et asservissable.</p>
+
+<p>Créer différents modules répondant aux besoins d'aquisitions, de traitement et de diffusions des données.</p>
+
+<p>Chaque module communique par un protocol standardisé (OSC - open sound control) rendant le déploiment modulaire.</p>
+
+<p>En X composantes</p>
+
+<ul>
+<li>Service GPIO (protocol  OSC)</li>
+<li>Module de lecture et de sythèse sonore  (pure data vanilla?)</li>
+<li>Module de lecture vidéo  (omx player osc wrapper?)</li>
+<li>Module de génération visuel (openframework?)</li>
+<li>Exposer les paramètres modifiable via une interface web</li>
+<li>Webserver permetant le controle de paramètre (node.js, socket.io et OSC)
+-
+Communique bidirectionnellement avec des paramètres interne via le protocol OSC.<br>
+</li>
+</ul>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>git clone --recursive</p>
+
+<p>Pour le pi :
+suivre d'abord ce guide
+<a href="https://learn.adafruit.com/node-embedded-development/installing-node-dot-js">https://learn.adafruit.com/node-embedded-development/installing-node-dot-js</a></p>
+
+<h3>
+<a id="liens" class="anchor" href="#liens" aria-hidden="true"><span class="octicon octicon-link"></span></a>liens</h3>
+
+<p>aide à configurer</p>
+
+<p><a href="https://github.com/adafruit/Adafruit-Pi-Finder">https://github.com/adafruit/Adafruit-Pi-Finder</a></p>
+
+<p>à implémenter :</p>
+
+<p><a href="https://learn.adafruit.com/raspberry-pi-open-sound-control/interacting-with-a-web-browser">https://learn.adafruit.com/raspberry-pi-open-sound-control/interacting-with-a-web-browser</a></p>
+
+<p>à fouiller :</p>
+
+<p><a href="https://github.com/russellmcc/node-osc-min">https://github.com/russellmcc/node-osc-min</a></p>
+
+<p>OSC et GPIO :</p>
+
+<p><a href="http://www.instructables.com/id/Raspberry-Pi-GPIO-home-automation/step6/Install-App/">http://www.instructables.com/id/Raspberry-Pi-GPIO-home-automation/step6/Install-App/</a></p>
+
+<p><a href="https://github.com/misterhay/RasCough/blob/master/RasCough.py">https://github.com/misterhay/RasCough/blob/master/RasCough.py</a></p>
+
+<p><a href="https://github.com/soundmaking/RPi8pinIO">https://github.com/soundmaking/RPi8pinIO</a></p>
+
+<p>audio :</p>
+
+<p><a href="https://github.com/yomguy/PiPlayer">https://github.com/yomguy/PiPlayer</a></p>
+
+<p><a href="https://github.com/jacoscaz/osc-browser-synth">https://github.com/jacoscaz/osc-browser-synth</a></p>
+
+<p>Vidéo :</p>
+
+<p>Interface :</p>
+
+<p><a href="https://github.com/lsu-emdm/nexusUI">https://github.com/lsu-emdm/nexusUI</a></p>
+
+<p><a href="http://reactivemusic.net/?tag=osc">http://reactivemusic.net/?tag=osc</a></p>
+
+<p>Un projet qui regroupe beaucoup des fonctionnalité
+<a href="http://pocketvj.com">http://pocketvj.com</a></p>
+
+<p>Video player OSC  (openframework et omxplayer)
+<a href="https://github.com/Hemisphere-Project/HPlayer">https://github.com/Hemisphere-Project/HPlayer</a></p>
+
+<p>basé sur :
+<a href="https://github.com/jvcleave/ofxOMXPlayer">https://github.com/jvcleave/ofxOMXPlayer</a></p>
+
+<p>Investiguer Node-Red</p>
+
+<p>investiguer gstreamer</p>
+
+<p><a href="https://wiki.matthiasbock.net/index.php/Hardware-accelerated_video_playback_on_the_Raspberry_Pi">https://wiki.matthiasbock.net/index.php/Hardware-accelerated_video_playback_on_the_Raspberry_Pi</a></p>
+
+<p><a href="http://www.onepitwopi.com/raspberry-pi/gstreamer-1-2-on-the-raspberry-pi/">http://www.onepitwopi.com/raspberry-pi/gstreamer-1-2-on-the-raspberry-pi/</a></p>
+
+<p><a href="http://blog.pi3g.com/2013/08/ffmpeg-gstreamer-raspberry-pi-windows-desktop-streaming/">http://blog.pi3g.com/2013/08/ffmpeg-gstreamer-raspberry-pi-windows-desktop-streaming/</a></p>
+
+<p><a href="http://rpiquadcopter.blogspot.fi/2014/06/raspberry-pi-camera-module-video.html">http://rpiquadcopter.blogspot.fi/2014/06/raspberry-pi-camera-module-video.html</a></p>
+
+<p><a href="https://github.com/avilleret/rpi_osc_video_player">https://github.com/avilleret/rpi_osc_video_player</a></p>
+
+<p>investiguer DBUS</p>
+
+<p><a href="http://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html">http://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/gllmAR">gllmAR</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
